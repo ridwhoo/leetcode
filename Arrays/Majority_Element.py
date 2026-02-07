@@ -19,6 +19,7 @@ class Solution:
 # Approach 2: Dictionary Method
 # Time: O(n), Space: O(n)
 # -----------------------------
+'''
 class Solution:
     def majorityElement_dict(self, nums: List[int]) -> int:
         d = {}
@@ -28,3 +29,4 @@ class Solution:
         for k, v in d.items() :
             if v > n // 2 :
                 return k
+'''
