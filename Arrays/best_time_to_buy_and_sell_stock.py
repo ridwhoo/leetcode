@@ -1,4 +1,8 @@
-"""
+from typing import List
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        """
         LeetCode 121 — Best Time to Buy and Sell Stock
 
         Approach:
@@ -8,17 +12,25 @@
 
         Time Complexity: O(n)
         Space Complexity: O(1)
-"""
+        """
 
-from typing import List
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        min_price = prices[0]  
+        # Initialize minimum price as the first day's price
+        min_price = prices[0]
+
+        # Initialize maximum profit to 0 (no profit initially)
         max_profit = 0
-        for price in prices :
+
+        # Traverse through prices
+        for price in prices:
+            # Calculate profit if sold today
             profit = price - min_price
-            if profit > max_profit :
+
+            # Update maximum profit if current profit is higher
+            if profit > max_profit:
                 max_profit = profit
-            if price < min_price :
+
+            # Update minimum price if current price is lower
+            if price < min_price:
                 min_price = price
-        return max_profit                 
+
+        return max_profit
