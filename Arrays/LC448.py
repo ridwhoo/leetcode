@@ -21,7 +21,7 @@ class Solution:
 
         result = []
 
-        # Collect indices that remain positive (numbers that are missing)
+        # Collect indices that remain positive (missing numbers)
         for i, num in enumerate(nums):
             if num > 0:
                 result.append(i + 1)
